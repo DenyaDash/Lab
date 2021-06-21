@@ -1,20 +1,33 @@
-﻿// Задание 2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿#include <iostream>
+#include <conio.h>
+#include <string>
 
-#include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "Russian");
+    string s;
+    string st;
+    cout << "Введите символ: ";
+    do
+    {
+        getline(cin, s);
+        if (s.length() > 1) cout << "Введите еще раз" << endl;
+    } while (s.length() > 1);
+    cout << "Символ введен" << endl;
+    cout << endl;
+    cout << "Введите строку: ";
+    do
+    {
+        getline(cin, st);
+        if (st.length() <= 1) cout << "Введите еще раз" << endl;
+    } while (st.length() <= 1);
+    cout << "Строка введена" << endl;
+    cout << endl;
+    int pos = st.find(s, 0);
+    if (pos != string::npos)
+        cout << "Номер символа в строке: " << pos + 1 << endl;
+    else cout << "Символ в строке отсутствует" << endl;
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

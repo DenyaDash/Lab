@@ -1,20 +1,37 @@
-﻿// Задание 3.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿#include <iostream>
+#include <conio.h>
+#include <math.h>
 
-#include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "Russian");
+    int arr[3][3];
+    cout << "Ввод значений матрицы 3х3" << endl;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << "Введите значение матрицы arr[" << i << "][" << j << "]=";
+            cin >> arr[i][j];
+        }
+    }
+    cout << "Значения матрицы введены" << endl;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+    double det = 0;
+    cout << "Определитель матрицы: ";
+    det = (arr[0][0] * arr[1][1] * arr[2][2]) + (arr[0][1] * arr[1][2] * arr[2][0])
+        + (arr[0][2] * arr[1][0] * arr[2][1]) - (arr[0][2] * arr[1][1] * arr[2][0])
+        - (arr[0][0] * arr[1][2] * arr[2][1]) - (arr[0][1] * arr[1][0] * arr[2][2]);
+    cout << det << endl;
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
