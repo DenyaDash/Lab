@@ -1,0 +1,6 @@
+﻿  PolarCoordinates.cpp
+C:\Users\Denis\source\repos\LR 3\PolarCoordinates\PolarCoordinates.cpp(206,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Denis\source\repos\LR 3\PolarCoordinates\PolarCoordinates.cpp(210,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Denis\source\repos\LR 3\PolarCoordinates\PolarCoordinates.cpp(216,69): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Denis\source\repos\LR 3\PolarCoordinates\PolarCoordinates.cpp(216,42): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  PolarCoordinates.vcxproj -> C:\Users\Denis\source\repos\LR 3\Debug\PolarCoordinates.exe
