@@ -7,21 +7,21 @@ using namespace std;
 
 class PolarCoordinates
 {
-    double r; // радиус
-    double phi; // угол
+    double r; // СЂР°РґРёСѓСЃ
+    double phi; // СѓРіРѕР»
 
 public:
-    PolarCoordinates operator + (PolarCoordinates& h); // перегруженный оператор +
-    PolarCoordinates& operator += (PolarCoordinates& h); // перегруженный оператор +=
-    PolarCoordinates operator - (PolarCoordinates& h); // перегруженный оператор -
-    PolarCoordinates& operator -= (PolarCoordinates& h); // перегруженный оператор -=
-    // Конструктор копирования
+    PolarCoordinates operator + (PolarCoordinates& h); // РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ +
+    PolarCoordinates& operator += (PolarCoordinates& h); // РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ +=
+    PolarCoordinates operator - (PolarCoordinates& h); // РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ -
+    PolarCoordinates& operator -= (PolarCoordinates& h); // РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ -=
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
     PolarCoordinates(const PolarCoordinates& a);
-    // Конструктор по умолчанию
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
     PolarCoordinates();
-    // Конструктор из r
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РёР· r
     PolarCoordinates(double radius);
-    // Конструктор из r и phi
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РёР· r Рё phi
     PolarCoordinates(double radius, double ygol);
 
     double get_x();
@@ -29,7 +29,7 @@ public:
     double get_phi();
     double get_y();
     double distance(PolarCoordinates& my);
-    // Перегруженный ввод и вывод
+    // РџРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РІРІРѕРґ Рё РІС‹РІРѕРґ
     friend std::istream& operator >> (std::istream& in, PolarCoordinates& r);
     friend std::ostream& operator << (std::ostream& out, const PolarCoordinates& r);
 };
@@ -212,7 +212,7 @@ int main()
 
     for (double i = 0; i <= 2 * M_PI + 0, 1; i += (M_PI / 8) * 0.0001)
     {
-        PolarCoordinates point(3 * sin(6 * i), i); // r, fi // сюда вводится уравнение
+        PolarCoordinates point(3 * sin(6 * i), i); // r, fi // СЃСЋРґР° РІРІРѕРґРёС‚СЃСЏ СѓСЂР°РІРЅРµРЅРёРµ
         SetPixel(hdc, 35 * point.get_x() + 300, -35 * point.get_y() + 250, RGB(255, 255, 255));
     }
     cin.ignore();
